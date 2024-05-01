@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat+Alternates:wght@100;200;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,
+html,
+.main,
+.box_one,
+.box_two {
+    width: 100%;
+    height: 100%;
+}
+.main {
+    position: relative;
+}
+.box_one {
+    height: 100vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+.box_one::after {
+    content: '';
+    display: block;
+    height: 100vh; 
+    visibility: hidden; 
+}
+
+.background img {
+    width: 100%;
+    height: 100vh;
+    position: fixed; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    transition: transform 0.2s ease-out;
+    will-change: transform; 
+    z-index: -1; 
+}
+
+.scroll-spacer {
+    height: 200vh;
+    visibility: hidden; 
+}
+
+
+.header {
+    position: fixed;
+    /* height: 10%; */
+    top: 15px;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.header p{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.box_one {
+    height: 100vh;
+}
+.title {
+    width: 100%;
+    height: 85%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+.title h3{
+    font-family: 'Yellowtail', cursive;
+    color: rgb(255 255 255);
+    text-align: center;
+    font-size: 70px;
+    position: absolute;
+    top: 35%;
+}
+.title h1{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    font-size: 150px;
+    font-weight: 600;
+    position: absolute;
+    top: 45%;
+}
+.scroll1 {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+#scroll1 {
+    position: absolute;
+    width: 25px;
+    height: 60px;
+    bottom: 30px;
+}
+#dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 32px;
+    left: 16.3%;
+    transition: transform 1.5s ease-in;
+} 
+#bg1, #bg2 {
+    transition: transform 0.2s ease-out; 
+    will-change: transform; 
+}
+
+.box_two {
+width: 100%;
+height: 100vh; 
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 20px;
+box-sizing: border-box;
+top: -210vh;
+}
+
+.image_container img {
+max-width: 100%;
+height: auto;
+}
+
+.text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+    cursor: default;
+}
+.text h1{
+    position: absolute;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    font-size: 60px;
+    top: 250px;
+    font-weight: 200;
+}
+.text p{
+    width: 550px;
+    position: absolute;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100,bold;
+    top: 350px;
+}
+.text h6 {
+    width: 550px;
+    position: absolute;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    top: 100%;
+}
+/* .scroll2 {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+.scroll2 img{
+    position: absolute;
+    width: 25px;
+    height: 60px;
+    bottom: 30px;
+    bottom: -780px;
+} */
+.box_three {
+    background: rgb(17, 14, 32);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -200vh;
+}
+.all_branch {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-55%);
+}
+.day1 {
+    position: absolute;
+    top: 375px;
+    left: -60px;
+}
+.story1 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgba(38, 6, 86, 0.47);
+    left: -4px;
+    cursor: pointer;
+}
+.mood1 {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: rgba(61, 11, 95, 0.47);
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    cursor: pointer;
+}
+.routine1 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgba(65, 21, 109, 0.47);
+    position: absolute;
+    left: 40px;
+    top: 45px;
+    cursor: pointer;
+}
+.day2 {
+    position: absolute;
+    left: 70px;
+    top: 300px;
+}
+.story2 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color:rgb(208 37 119 / 40%);
+    top: 5px;
+    left: 15px;
+    cursor: pointer;
+}
+.mood2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(47 0 79 / 60%);
+    left: 18px;
+    top: 30px;
+    cursor: pointer;
+}
+.routine2 {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(29 2 56 / 47%);
+    left: 20px;
+    top: 50px;
+    cursor: pointer;
+}
+.day3 {
+    position: absolute;
+    top: 215px;
+    left: -30px;
+}
+.story3 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgba(38, 6, 86, 0.47);
+    left: -4px;
+    cursor: pointer;
+}
+.mood3 {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: rgba(61, 11, 95, 0.47);
+    position: absolute;
+    left: 12px;
+    top: 20px;
+    cursor: pointer;
+}
+.routine3 {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgba(65, 21, 109, 0.47);
+    position: absolute;
+    left: 35px;
+    top: 45px;
+    cursor: pointer;
+}
+.day4 {
+    position: absolute;
+    top: 146px;
+    left: 148px;
+}
+.story4 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(38, 6, 86, 0.47);
+    left: -5px;
+    cursor: pointer;
+}
+.mood4 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgba(61, 11, 95, 0.47);
+    position: absolute;
+    left: -4px;
+    top: 20px;
+    cursor: pointer;
+}
+.routine4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(65, 21, 109, 0.47);
+    position: absolute;
+    left: -3px;
+    top: 40px;
+    cursor: pointer;
+}
+.day5 {
+    position: absolute;
+    top: 35px;
+    left: 65px;
+}
+.story5 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:rgb(208 37 119 / 40%);
+    left: -5px;
+    cursor: pointer;
+}
+.mood5 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgb(47 0 79 / 60%);
+    position: absolute;
+    left: 12px;
+    top: 25px;
+    cursor: pointer;
+}
+.routine5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:  rgb(29 2 56 / 47%);
+    position: absolute;
+    left: 28px;
+    top: 50px;
+    cursor: pointer;
+}
+.day6 {
+    position: absolute;
+    top: -20px;
+    left: 250px;
+}
+.story6 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color:rgb(208 37 119 / 40%);
+    left: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.mood6 {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: rgb(47 0 79 / 60%);
+    position: absolute;
+    left: 7px;
+    top: 25px;
+    cursor: pointer;
+}
+.routine6 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:  rgb(29 2 56 / 47%);
+    position: absolute;
+    left: 10px;
+    top: 45px;
+    cursor: pointer;
+}
+.day7 {
+    position: absolute;
+    top: -90px;
+    left: 150px;
+}
+.story7 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgba(38, 6, 86, 0.47);
+    left: -8px;
+    top: -5px;
+    cursor: pointer;
+}
+.mood7 {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: rgba(61, 11, 95, 0.47);
+    position: absolute;
+    left: 3px;
+    top: 20px;
+    cursor: pointer;
+}
+.routine7 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(65, 21, 109, 0.47);
+    position: absolute;
+    left: 14px;
+    top: 45px;
+    cursor: pointer;
+}
+.hover_text1 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 30px;
+    width: 100px;
+    left: -70px;
+    cursor: default;
+}
+.hover_text2 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 30px;
+    width: 100px;
+    left: -70px;
+    cursor: default;
+}
+.hover_text3 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 26px;
+    width: 100px;
+    left: -70px;
+    cursor: default;
+}
+.hover_text4 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    left: 90px;
+    cursor: default;
+}
+.hover_text5 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    left: 60px;
+    cursor: default;
+}
+.hover_text6 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    left: 40px;
+    cursor: default;
+}
+.hover_text7 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 5px;
+    width: 100px;
+    left: -50px;
+    cursor: default;
+}
+.hover_text8 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: -50px;
+    cursor: default;
+}
+.hover_text9 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    left: -60px;
+    cursor: default;
+}
+.hover_text10 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: 80px;
+    cursor: default;
+}
+.hover_text11 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    left: 60px;
+    cursor: default;
+}
+.hover_text12 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    left: 30px;
+    cursor: default;
+}
+
+.hover_text13 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: -70px;
+    cursor: default;
+}
+.hover_text14 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: -65px;
+    cursor: default;
+}
+.hover_text15 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: -70px;
+    cursor: default;
+}
+
+.hover_text16 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: 80px;
+    cursor: default;
+}
+.hover_text17 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    left: 65px;
+    cursor: default;
+}
+.hover_text18 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    left: 40px;
+    cursor: default;
+}
+.hover_text19 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    left: -60px;
+    cursor: default;
+}
+.hover_text20 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 13px;
+    width: 100px;
+    left: -60px;
+    cursor: default;
+}
+.hover_text21 p{
+    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    left: -60px;
+    cursor: default;
+}
+.explain {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+}
+.text_ex {
+    font-size: 18px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    color: rgb(216, 206, 226);
+    position: absolute;
+    top: -25%;
+    width: 310px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: default;
+}
+.e_story {
+    /* position: absolute; */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(38, 6, 86, 0.47);
+}
+.e_mood {
+    /* position: absolute; */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color:  rgba(61, 11, 95, 0.47);
+}
+.e_routine {
+    /* position: absolute; */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(65, 21, 109, 0.47); 
+}
+/* .n_story {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color:  rgb(208 37 119 / 35%);
+    top: 215%;
+    left: 73%;
+} */
+
+.scroll-downs {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .mousey {
+    width: 25px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 25px;
+    position: relative;
+  }
+  
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    animation: scroll 3s infinite;
+  }
+  
+  @keyframes scroll {
+    0%, 100% {
+      top: 8px;
+    }
+    50% {
+      top: 25px;
+    }
+  }
+  
