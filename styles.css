@@ -194,7 +194,7 @@ height: auto;
 .box_three {
     background: rgb(17, 14, 32);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
