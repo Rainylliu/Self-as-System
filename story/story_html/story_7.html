@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream</title>
+    <link rel="stylesheet" href="../story_css/story_7.css">
+</head>
+<style>
+    .left_container {
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 30%;
+        margin: 0;
+        /* //border: 1px solid white; */
+    }
+
+    .box {
+        height: 100%;
+        width: 40%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* //border: 1px solid white; */
+    }
+
+    .right_container {
+        height: 100vh;
+        width: 30%;
+        margin: 0;
+        /* //border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .vertical-line {
+        position: absolute;
+        width: 1px;
+        height: 527px;
+        background-color: white;
+        left: 46px;
+        /* 调整位置以通过所有圆的中心 */
+        bottom: 0;
+        /* 调整位置以通过所有条目的底部 */
+    }
+
+    .top-line {
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: white;
+        left: 25px;
+        top: 14px;
+    }
+
+    .bottom-line {
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: white;
+        left: 25px;
+        bottom: 0px;
+    }
+
+    .entry {
+        display: flex;
+        align-items: center;
+        margin-bottom: -12px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        background-color: #D6CFDF;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .line {
+        width: 30px;
+        height: 0.5px;
+        background-color: white;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    .line::after {
+        content: '';
+        width: 1px;
+        height: 20px;
+        background-color: white;
+        position: absolute;
+        top: -13.5px;
+        right: -9px;
+        transform: rotate(65deg);
+    }
+
+    .line::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: -12px;
+        right: -22px;
+    }
+
+
+    .text {
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        margin-left: 20px;
+        /* 新增的左边距 */
+        margin-top: -20px;
+        transition: width 0.3s ease-in-out;
+        font-family: 'Montserrat Alternates', sans-serif;
+        color: white;
+    }
+
+
+    .top-time {
+        position: absolute;
+        font-family: 'Montserrat Alternates', sans-serif;
+        color: rgb(216, 206, 226);
+        font-size: 16px;
+        font-weight: 200;
+        top: -10px;
+        left: 25px;
+        right: 0px;
+    }
+
+    .bottom-time {
+        position: absolute;
+        font-family: 'Montserrat Alternates', sans-serif;
+        color: rgb(216, 206, 226);
+        font-size: 16px;
+        font-weight: 200;
+        bottom: -20px;
+        left: 25px;
+        right: 0px;
+    }
+
+    .right-text {
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: white;
+    }
+
+    .right_title {
+        font-family: 'Montserrat Alternates', sans-serif;
+        color: rgb(17, 14, 32);
+        font-size: 24px;
+        background: #D4CEDE;
+    }
+</style>
+<body>
+<div class="navbar">
+    <input type="checkbox">
+    <span></span>
+    <span></span>
+    <ul>
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/routine_html/routine_7.html">ROUTINE 7th</a></li>
+        <li><a href="/mood_html/mood_7.html">MOOD 7th</a></li>
+    </ul>
+</div>
+
+<div class="div_container">
+    <div class="left_container">
+        <div class="timeline">
+            <div class="top-time">01:29</div>
+            <div class="top-line"></div>
+            <div class="vertical-line"></div> 
+            <div class="bottom-line"></div>
+            <div class="bottom-time">09:53</div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 30px;height: 30px;"></div>
+                <div class="line"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">3 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.4;width: 44px;height: 44px;left: -8px"></div>
+                <div class="line" style="left: -8px"></div>
+                <div class="text">
+                    <div class="stage">Awake</div>
+                    <div class="duration">1 hr 8 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">13 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.4;width: 40px;height: 40px;left: -6px"></div>
+                <div class="line" style="left: -6px"></div>
+                <div class="text">
+                    <div class="stage">Awake</div>
+                    <div class="duration">31 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">15 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.4;width: 40px;height: 40px;left: -6px"></div>
+                <div class="line" style="left: -6px"></div>
+                <div class="text">
+                    <div class="stage">Awake</div>
+                    <div class="duration">39 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">18 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.4;width: 30px;height: 30px;"></div>
+                <div class="line"></div>
+                <div class="text">
+                    <div class="stage">Awake</div>
+                    <div class="duration">5 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">17 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 1;width: 40px;height: 40px;left: -6px"></div>
+                <div class="line" style="left: -6px"></div>
+                <div class="text">
+                    <div class="stage">Deep</div>
+                    <div class="duration">37 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 30px;height: 30px;"></div>
+                <div class="line"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">5 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.6;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Rem</div>
+                    <div class="duration">20 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">26 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 1;width: 30px;height: 30px;"></div>
+                <div class="line"></div>
+                <div class="text">
+                    <div class="stage">Deep</div>
+                    <div class="duration">9 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">15 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 1;width: 30px;height: 30px;"></div>
+                <div class="line"></div>
+                <div class="text">
+                    <div class="stage">Deep</div>
+                    <div class="duration">8 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">19 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.6;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Rem</div>
+                    <div class="duration">19</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 44px;height: 44px;left: -8px"></div>
+                <div class="line" style="left: -8px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">1 hr 8 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.6;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Rem</div>
+                    <div class="duration">21 min</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="circle" style="opacity: 0.8;width: 34px;height: 34px;left: -4px"></div>
+                <div class="line" style="left: -4px"></div>
+                <div class="text">
+                    <div class="stage">Core</div>
+                    <div class="duration">17 min</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+            <div class="ball">
+                <div class="container">
+                    <img class="chart" src="../img/chart_07.svg" alt="chart1">
+                    <iframe
+                            src="https://my.spline.design/magicsphere-5e518ae4da5ccfc7deb57043e7253414/"
+                            id="myIframe"
+                            frameborder="0"
+                            width="100%"
+                            height="100%"
+                            class="fixed-iframe"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="right_container">
+        <pre class="right-text">
+<span class="right_title">Dream of the 7th Day</span>
+
+I dreamed of traveling with my
+friends. We walked on the beach
+and picked up shells. Every day is
+full of laughter and adventure.
+
+One night during our trip, we
+decided to have a party on the
+beach, sit around, listen to music,
+and have a good time. Everyone
+gathered together and talked, and
+the whole beach was filled with
+our laughter. However, what made
+me most ecstatic was that the
+person I liked was also on this trip.
+        </pre>
+        </div>
+    </div>
+</body>
+</html>

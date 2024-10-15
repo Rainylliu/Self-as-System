@@ -1,11 +1,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat+Alternates:wght@100;200;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+@media (max-width: 1100px) {
+    .text {
+        width: 120px !important;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .fixed-iframe {
+        top: 15px !important; /* 根据需要调整 */
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.navbar {
+.navbar, .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    position: absolute;
+    padding: 5px;
+    background-color: #ffffff35;
+    border-radius: 50px;
+    height: 50px;
+    top: 4%;
+    left: 3%;
+    display: flex;
+    z-index: 10;
+}
+
+.navbar input {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.navbar span {
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 2px;
+    top: calc(50% - 10px);
+    border-radius: 15px;
+    background-color: rgb(216, 206, 226);
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out
+;
+}
+
+.navbar span:nth-child(3) {
+    top: calc(50% + 6px);
+}
+
+.navbar ul {
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0px 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(216, 206, 226);
+}
+
+.navbar ul li a:hover {
+    color:rgb(17, 14, 32);
+}
+
+.navbar input:checked ~ ul{
+    width: 400px;
+}
+
+.navbar input:checked ~ span:nth-child(2){
+    margin: 8px;
+    top: calc(50% -10px);
+    transform: rotate(-45deg);
+    background-color:  rgb(216, 206, 226);
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar input:checked ~ span:nth-child(3){
+    margin: 7px;
+    top: calc(50% - 5px);
+    transform: rotate(45deg);
+    background-color: rgb(216, 206, 226);
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+body,
+html,
+main{
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 14, 32);
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*.container {*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*}*/
+/*.box2 {*/
+/*    position: relative;*/
+/*    width: 40%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    background-image: url(../img/chart_01.svg);*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-size: contain;*/
+
+/*    !* top: 100px;*/
+/*    left: 120px; *!*/
+/*}*/
+/*.ball,.chart {*/
+/*    position: absolute;*/
+/*}*/
+/*.ball {*/
+/*    width: 112%;*/
+/*    height: 72%;*/
+/*    right: -30px;*/
+/*    top: 120px;*/
+/*}*/
+
+/*.chart {*/
+/*    width: 100%;*/
+/*    z-index: 1;*/
+/*    top: 136px;*/
+/*    left: -4px;*/
+/*}*/
+
+.div_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.chart {
+    width: 100%;
+    height: auto;
+}
+
+.fixed-iframe {
+    position: absolute;
+    top: 25px; /* 根据需要调整 */
+    left: 0; /* 根据需要调整 */
+    width: 100%; /* 根据需要调整 */
+    height: 100%; /* 根据需要调整 */
+}
+
+:deep(.spline-watermark){
+    display: none;
+}
+
+/* .navbar {
     position: fixed;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -21,21 +203,10 @@
     font-weight: 200;
     color: white;
     font-size: 25px;
-}
-body,
-html,
-main{
-    width: 100%;
-    height: 100%;
-    background: rgb(17, 14, 32);
-}
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.heart_rate {
+} */
+
+
+/* .heart_rate {
     position: relative;
     margin: 20px auto;
     width: 150px;
@@ -117,8 +288,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 195px;
-    left: -126px;
+    top: 206px;
+    left: -68px;
 }
 .h_max h5{
     position: absolute;
@@ -126,8 +297,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 210px;
-    left: -116px;
+    top: 222px;
+    left: -58px;
 }
 .h_min {
     position: relative;
@@ -138,8 +309,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 375px;
-    left: 20px;
+    top: 366px;
+    left: 101px;
 }
 .h_min h5{
     position: absolute;
@@ -147,8 +318,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 387px;
-    left: 28px;
+    top: 383px;
+    left: 110px;
 }
 .b_max {
     position: relative;
@@ -159,8 +330,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 420px;
-    left: 43px;
+    top: 418px;
+    left: -68px;
 }
 .b_max h5{
     position: absolute;
@@ -168,8 +339,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 436px;
-    left: 49px;
+    top: 433px;
+    left: -65px;
 }
 .b_min {
     position: relative;
@@ -180,8 +351,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 556px;
-    left: 76px;
+    top: 543px;
+    left: -124px;
 }
 .b_min h5{
     position: absolute;
@@ -189,8 +360,8 @@ main{
     color: rgb(216, 206, 226);
     font-size: 15px;
     font-weight: 200;
-    top: 570px;
-    left: 80px;
+    top: 559px;
+    left: -119px;
 }
 .h_max h3 {
     position: absolute;
@@ -234,7 +405,7 @@ main{
 .text p{
     position: absolute;
     width: 405px;
-    height: 382px;
+    height: 330px;
     color: rgb(216, 206, 226);
     border: 2px dashed #eebbc3;
     border-radius: 5px;
@@ -250,4 +421,4 @@ main{
   .sound {
     position: absolute;
     top: 15px;
-  }
+  } */

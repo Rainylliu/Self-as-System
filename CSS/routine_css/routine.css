@@ -34,7 +34,7 @@ html,
     width: 90%;
     height: 50%;
     position: absolute;
-    right: -20px;
+    right: -3%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -247,11 +247,11 @@ html,
     width: 90%;
     height: 50%;
     position: absolute;
-    right: -20px;
+    right: -3%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    top: 340px;
+    top: 40%;
 }
 .img_position {
     width: 100%;

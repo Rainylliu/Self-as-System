@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠阶段图</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .vertical-line {
+            position: absolute;
+            width: 2px;
+            height: 470px;
+            background-color: #6a0572;
+            left: 46px;
+            /* 调整位置以通过所有圆的中心 */
+            bottom: 0;
+            /* 调整位置以通过所有条目的底部 */
+        }
+
+        .top-line {
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: #6a0572;
+            left: 20px;
+            top: 14px;
+        }
+
+        .bottom-line{
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: #6a0572;
+            left: 20px;
+            bottom: 0px;
+        }
+
+        .entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: -10px;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            position: relative;
+        }
+
+        .line {
+            width: 30px;
+            height: 0.5px;
+            background-color: white;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .line::after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: white;
+            position: absolute;
+            top: -13.5px;
+            right: -9px;
+            transform: rotate(65deg);
+        }
+
+        .line::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: -12px;
+            right: -22px;
+        }
+
+        .text {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin-left: 20px;
+            /* 新增的左边距 */
+            margin-top: -20px;
+        }
+
+        .time {
+            margin-right: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timeline">
+        <div class="top-line"></div>
+        <div class="vertical-line"></div> <!-- 新增的垂直线 -->
+        <div class="bottom-line"></div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">24 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Deep</div>
+                <div class="duration">15 min</div>
+            </div>
+        </div>
+        <!-- 继续添加其他条目 -->
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">10 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Deep</div>
+                <div class="duration">15 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">9 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Rem</div>
+                <div class="duration">17 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">23 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Deep</div>
+                <div class="duration">12 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">13 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Deep</div>
+                <div class="duration">7 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Rem</div>
+                <div class="duration">9 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Awake</div>
+                <div class="duration">2 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">4 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Rem</div>
+                <div class="duration">22 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">1 hr 5 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Rem</div>
+                <div class="duration">32 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">1 hr 30 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Rem</div>
+                <div class="duration">19 hr</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">1 hr 1 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Rem</div>
+                <div class="duration">29 min</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="text">
+                <div class="stage">Core</div>
+                <div class="duration">29 min</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

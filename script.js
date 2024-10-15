@@ -355,5 +355,4 @@ window.addEventListener('scroll', function() {
         // 当滚动到.box_two区域时的逻辑
         // 例如，展示.box_two内容，移动.dot等
     }
-    // 其他逻辑保持不变...
 });
